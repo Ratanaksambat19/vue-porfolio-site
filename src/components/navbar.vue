@@ -15,15 +15,16 @@
         </ul>
 
         <div class="burger" @click="burgerFn">
-            <div class="line1"></div>
+            <!-- <div class="line1"></div>
             <div class="line2"></div>
-            <div class="line3"></div>
+            <div class="line3"></div> -->
+            <icon name = "burger"/>
         </div>
         <transition name='slide-fade'>
           <NavMobile class="show-mobile" v-if="showNavbar"/>
         </transition>
-        
     </nav>
+    
   </div>
     
 </template>
@@ -79,7 +80,6 @@ nav {
 }
 
 .burger {
-  // margin-left: 50%;
   display: none;
 }
 
@@ -88,13 +88,6 @@ nav {
   transform: translateX(100%);
 }
 
-.burger div{
-  width: 25px;
-  border-radius: 3px;
-  height: 3px;
-  background-color: #f37272;
-  margin: 5px;
-} 
 
 /* CATAGOER STYLING HERE! */
 $red: #f37272;
@@ -128,7 +121,7 @@ ul {
     }
 
     .logo {
-      margin-left: 8%;
+      margin-left: 13%;
 
     }
     .show-mobile {
@@ -136,7 +129,7 @@ ul {
       transform: translateX(0%);
     }
 
-    /* durations and timing functions.              */
+    /* durations and timing functions.*/
     .slide-fade-enter-active {
       transition: all .4s ease;
     }
@@ -150,17 +143,6 @@ ul {
     }
     .nav-links {
       opacity: 0;
-      // position: absolute;
-      // right: 0px;
-      // height: 92vh;
-      // top: 8vh;
-      // align-items: center;
-      // background-color: #2a2a2a;
-      // display: flex;
-      // width: 50%;
-      // flex-direction: column;
-      // transform: translateX(100%);
-      // transition: transform 0.5s ease-in;
     } 
 
     .nav-links li {
@@ -171,15 +153,12 @@ ul {
       display: inline-block;
       cursor: pointer;
       position: absolute;
-      top: 20px;
-      left: 90%;
+      top: 0%;
+      left: 80%;
     }
 
     .nav-links {
-      
-      
       transform: translateX(0%);
-      // transition: transform 0.5s ease-in;
     }
   } 
 
@@ -226,5 +205,7 @@ a {
     }
   }
 }
+
+/* burger here */
 
 </style>
