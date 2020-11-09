@@ -62,8 +62,6 @@ export default {
   box-sizing: border-box;
 }
 
-
-
 nav {
   display: flex;
   justify-content: space-around;
@@ -87,7 +85,6 @@ nav {
   opacity: 0;
   transform: translateX(100%);
 }
-
 
 /* CATAGOER STYLING HERE! */
 $red: #f37272;
@@ -151,6 +148,7 @@ ul {
 
     .burger {
       display: inline-block;
+      z-index: 1;
       cursor: pointer;
       position: absolute;
       top: 0%;
