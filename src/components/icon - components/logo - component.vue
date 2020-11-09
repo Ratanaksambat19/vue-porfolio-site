@@ -67,7 +67,7 @@ export default {
     .logo{
     animation-delay: 0.1s;
     
-    animation-duration: 5s;
+    animation-duration: 1s;
     }
     
     .cls-1, .cls-4 {

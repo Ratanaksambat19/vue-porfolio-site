@@ -4,9 +4,9 @@
             <li class="github">
               <a href="#"><icon name = 'github'></icon></a>
             </li>
-            <li><a href="#">PROJECT</a></li>
-            <li><a href="#">ABOUT</a></li>  
-            <li><a href="#">CONTACT</a></li>
+            <li><router-link to="/">PROJECT</router-link></li>
+            <li><router-link to="/about">ABOUT</router-link></li>  
+            <li><router-link to="/contact">CONTACT</router-link></li>
         </ul>
   </div>
     

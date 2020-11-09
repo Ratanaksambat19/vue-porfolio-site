@@ -2,22 +2,19 @@
   <div>
     <nav>
         <div class="logo">
-            <icon name = 'logo'></icon>
+          <router-link to="/"><icon name = 'logo'></icon></router-link>
         </div>
         
         <ul class="nav-links">
             <li class="github">
               <a href="#"><icon name = 'github'></icon></a>
             </li>
-            <li><a href="#">PROJECT</a></li>
-            <li><a href="#">ABOUT</a></li>  
-            <li><a href="#">CONTACT</a></li>
+            <li><router-link to="/">PROJECT</router-link></li>
+            <li><router-link to="/about">ABOUT</router-link></li>  
+            <li><router-link to="/contact">CONTACT</router-link></li>
         </ul>
 
         <div class="burger" @click="burgerFn">
-            <!-- <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div> -->
             <icon name = "burger"/>
         </div>
         <transition name='slide-fade'>
