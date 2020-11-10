@@ -3,7 +3,7 @@
         <div class="intro">
             <div class="name">I'm <br><div class="line"></div> SAMBATH</div>
             
-            <div class="hire-me"><router-link to='/contact' class="button">HIRE ME</router-link></div>
+            <div class="hire-me" :class="HireMeClass" @mouseover="mouseover" @mouseleave="mouseleave"><router-link to='/contact' class="button">{{HireMe}}</router-link></div>
         </div>
 
         <div class="avatar">
@@ -11,7 +11,7 @@
                 <h1>DEVELOPER <br> UI & UX DESIGNER</h1>
             </div>
             <div class="aniamte">
-                <HeroIcon name = 'avatar'/>
+                <HeroIcon name = 'hero-avatar'/>
             </div>
         </div>
 
@@ -25,18 +25,37 @@ import HeroIcon from '@/components/icon - components/HeroIcon - component.vue'
 export default {
     components: {
         HeroIcon
-    }
+    },
+    data() {
+        return {
+            HireMe: 'HIRE ME',
+            HireMeClass: [],
+        }
+    },
+    methods: {
+        mouseover() {
+            this.HireMe = 'SAY HI!'
+            this.HireMeClass = ['animate__animated', 'animate__bounce',  'animate__delay-0.8s']
+        },
+        mouseleave() {
+            this.HireMe = 'HIRE ME'
+            this.HireMeClass = []
+        }
+    },
     
 }
 </script>
 
 <style lang="scss" scoped>
+    @import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap);
+
     $pink: #FD4066;
     $darkgray:  #2a2a2a;
     .hero-section {
+        font-family: 'Comfortaa', cursive;
         display: grid;
         background-color: $darkgray;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         
     }
     .intro {
@@ -51,12 +70,17 @@ export default {
             background-color:$pink;
             width: 16rem;
             height: 2px;
+            margin: 10px 0px 15px 0px;
         }
         .hire-me {
             margin-top: 30%;
             padding: 20px 50px 20px 50px;
+            width: 17rem;
             display: inline-block;
             background-color: $pink;
+            animation-duration: 1s;
+            cursor: pointer;
+            -animate-repeat: 4;
             
             
             .button {
@@ -68,7 +92,6 @@ export default {
     }
     .avatar {
         display: block;
-        // justify-content:center;
         
         .title {
             margin-top: 2%;
@@ -76,11 +99,7 @@ export default {
             color: white;
             font-weight: bold;
             font-size: 20px;
-        }
-
-        .animate {
-            color: $pink;
-            padding: 50%;
+            padding-bottom: 5%;
         }
     }
     .description {
@@ -89,5 +108,9 @@ export default {
         text-align: center;
         margin-right: 10%;
         color: white;
+    }
+
+    @media screen and (max-width: 1200px) {
+        
     }
 </style>

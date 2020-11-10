@@ -109,7 +109,7 @@ ul {
   }
 }
 
- @media screen and (max-width: 1000px) {
+ @media screen and (max-width: 1200px) {
     body {
       overflow-x: hidden;
     }
