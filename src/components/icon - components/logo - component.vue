@@ -64,6 +64,7 @@ export default {
 </script>
 
  <style>
+ 
     .logo{
     animation-delay: 0.1s;
     

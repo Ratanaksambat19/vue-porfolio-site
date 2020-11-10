@@ -91,10 +91,10 @@ $duration: 0.2s;
 $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:700);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap);
 
 body {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 ul {
@@ -159,7 +159,9 @@ ul {
 
 a {
   font-size: 20px;
+  letter-spacing: 0.3rem;
   color: $whitey;
+  font-weight: bold;
   position: relative;
   text-transform: uppercase;
   text-decoration: none;
