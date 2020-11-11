@@ -1,6 +1,7 @@
 <template>
     <div class="hero-section">
         <div class="intro">
+            <div class="intro-title"><h1>DEVELOPER <br> UI & UX DESIGNER</h1></div>
             <div class="name">I'm <br><div class="line"></div> SAMBATH</div>
             
             <div class="hire-me" :class="HireMeClass" @mouseover="mouseover" @mouseleave="mouseleave"><router-link to='/contact' class="button">{{HireMe}}</router-link></div>
@@ -45,7 +46,6 @@ export default {
             this.HireMeClass = []
         }
     },
-    
 }
 </script>
 
@@ -62,11 +62,14 @@ export default {
         display: grid;
         background-color: $darkgray;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        
     }
+
     .intro {
         justify-self: center;
         align-self: center;
+        .intro-title {
+            display: none;
+        }
 
         .name {
             font-size: 50px;
@@ -88,7 +91,6 @@ export default {
             cursor: pointer;
             -animate-repeat: 4;
             
-            
             .button {
                 font-size: 30px;
                 font-weight: bold;
@@ -96,6 +98,7 @@ export default {
             }
         }
     }
+
     .info h1{
             display: none;
         }
@@ -125,12 +128,13 @@ export default {
             .title {
                 font-size: 15px;
             }
-        }
-        
-        .animate {
+
+            .animate {
             margin-top: -25%;
             transform: scale(0.6);
+            }
         }
+
         .description {
             display: none;
         }
@@ -157,6 +161,7 @@ export default {
                 height: 2px;
                 margin: 10px 0px 15px 0px;
             }
+
             .hire-me {
                 margin-top: 10%;
                 width: 12rem;
@@ -171,7 +176,74 @@ export default {
 
     @media screen and (max-width: 800px) {
         .hero-section {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-top: -10%;
+        }
+
+        .info h1 {
             display: none;
         }
+        .avatar {
+            margin-right: 50%;
+            margin-top: -30%;
+            .title {
+                font-size: 15px;
+                display: none;
+            }
+
+            .animate {
+            transform: scale(0.5);
+            }
+        }
+
+        .intro {
+            margin-left: 13%;
+            grid-column: 1/2;
+
+            .intro-title{
+                display: inline-block;
+                color: white;
+                font-size: 10px;
+                margin-top: -50%;
+                margin-bottom: 30%;
+                text-align: center;
+            }
+
+            .name {
+            font-size: 20px;
+            color: white;
+            }
+
+            .line {
+                background-color:$pink;
+                width: 5rem;
+                height: 2px;
+                margin: 10px 0px 15px 0px;
+            }
+
+            .hire-me {
+                margin-top: 5%;
+                // width: 9rem;
+                padding: 20px 30px 20px 30px;
+
+                .button {
+                    display: inline;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .description {
+            display: block;
+            margin-top: -30%;
+            border: solid 2px $pink;
+            padding: 20px;
+            margin-left: 10%;
+            font-style: italic;
+            font-size: 10px;
+            grid-column: 1/3;
+        }
+
+
     }
 </style>
