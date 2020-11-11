@@ -29,15 +29,13 @@ export default {
     background-color: #2a2a2a;
     top: 10%;
     left: 50%;
-    // flex-direction: column;
-    // justify-content: center;
+    z-index: 1;
     width: 50%;
     height: 100%;
   }
   .nav-links-mobile {
     position: absolute;
-    left: 30%;
-    // justify-content: space-around;
+    left: 15%;
   }
   .nav-links-mobile li{
     margin-top: 50%;

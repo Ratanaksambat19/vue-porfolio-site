@@ -4,13 +4,16 @@
             <div class="name">I'm <br><div class="line"></div> SAMBATH</div>
             
             <div class="hire-me" :class="HireMeClass" @mouseover="mouseover" @mouseleave="mouseleave"><router-link to='/contact' class="button">{{HireMe}}</router-link></div>
+            <div class="info">
+                <h1>A college Student Who is exploring New Technology. <br> <br> A Freelancer Who is Hoping To Bring Your Idea To Life...</h1>
+            </div>
         </div>
 
         <div class="avatar">
             <div class="title">
                 <h1>DEVELOPER <br> UI & UX DESIGNER</h1>
             </div>
-            <div class="aniamte">
+            <div class="animate">
                 <HeroIcon name = 'hero-avatar'/>
             </div>
         </div>
@@ -52,10 +55,13 @@ export default {
     $pink: #FD4066;
     $darkgray:  #2a2a2a;
     .hero-section {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
         font-family: 'Comfortaa', cursive;
         display: grid;
         background-color: $darkgray;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         
     }
     .intro {
@@ -90,6 +96,10 @@ export default {
             }
         }
     }
+    .info h1{
+            display: none;
+        }
+
     .avatar {
         display: block;
         
@@ -110,7 +120,58 @@ export default {
         color: white;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1250px) {
+        .avatar {
+            .title {
+                font-size: 15px;
+            }
+        }
         
+        .animate {
+            margin-top: -25%;
+            transform: scale(0.6);
+        }
+        .description {
+            display: none;
+        }
+        
+        .info h1 {
+            display: inline-block;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            padding: 10%;
+            margin-left: -20%;
+        }
+
+        .intro {
+            margin-left: 20%;
+            .name {
+            font-size: 40px;
+            color: white;
+            }
+
+            .line {
+                background-color:$pink;
+                width: 12.5rem;
+                height: 2px;
+                margin: 10px 0px 15px 0px;
+            }
+            .hire-me {
+                margin-top: 10%;
+                width: 12rem;
+                padding: 20px 30px 20px 30px;
+
+                .button {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .hero-section {
+            display: none;
+        }
     }
 </style>
