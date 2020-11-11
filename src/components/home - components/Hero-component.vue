@@ -1,7 +1,7 @@
 <template>
     <div class="hero-section">
         <div class="intro">
-            <div class="intro-title"><h1>DEVELOPER <br> UI & UX DESIGNER</h1></div>
+            <!-- <div class="intro-title"><h1>DEVELOPER <br> UI & UX DESIGNER</h1></div> -->
             <div class="name">I'm <br><div class="line"></div> SAMBATH</div>
             
             <div class="hire-me" :class="HireMeClass" @mouseover="mouseover" @mouseleave="mouseleave"><router-link to='/contact' class="button">{{HireMe}}</router-link></div>
@@ -67,9 +67,9 @@ export default {
     .intro {
         justify-self: center;
         align-self: center;
-        .intro-title {
-            display: none;
-        }
+        // .intro-title {
+        //     display: none;
+        // }
 
         .name {
             font-size: 50px;
@@ -175,6 +175,22 @@ export default {
     }
 
     @media screen and (max-width: 800px) {
+        .avatar {
+            grid-row: 1;
+
+            .animate {
+                transform: scale(0.7);
+                margin-right: 30%;
+            }
+        }
+        
+        .intro {
+            margin-top: -10%;
+        }
+    }
+
+    /* Another layout */
+    /*@media screen and (max-width: 800px) {
         .hero-section {
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             margin-top: -10%;
@@ -243,7 +259,5 @@ export default {
             font-size: 10px;
             grid-column: 1/3;
         }
-
-
-    }
+    } */
 </style>
