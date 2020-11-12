@@ -1,9 +1,9 @@
 <template>
     <div class="hero-section">
         <div class="intro">
+            
             <!-- <div class="intro-title"><h1>DEVELOPER <br> UI & UX DESIGNER</h1></div> -->
             <div class="name">I'm <br><div class="line"></div> SAMBATH</div>
-            
             <div class="hire-me" :class="HireMeClass" @mouseover="mouseover" @mouseleave="mouseleave"><router-link to='/contact' class="button">{{HireMe}}</router-link></div>
             <div class="info">
                 <h1>A college Student Who is exploring New Technology. <br> <br> A Freelancer Who is Hoping To Bring Your Idea To Life...</h1>
@@ -62,11 +62,13 @@ export default {
         display: grid;
         background-color: $darkgray;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        padding-bottom: 10%;
     }
 
     .intro {
         justify-self: center;
         align-self: center;
+
         // .intro-title {
         //     display: none;
         // }
@@ -75,16 +77,16 @@ export default {
             font-size: 50px;
             color: white;
         }
+
         .line {
             background-color:$pink;
             width: 16rem;
             height: 2px;
             margin: 10px 0px 15px 0px;
         }
+        
         .hire-me {
             margin-top: 30%;
-            padding: 20px 50px 20px 50px;
-            width: 17rem;
             display: inline-block;
             background-color: $pink;
             animation-duration: 1s;
@@ -93,6 +95,8 @@ export default {
             
             .button {
                 font-size: 30px;
+                background-color: $pink;
+                padding: 20px 50px 20px 50px;
                 font-weight: bold;
                 letter-spacing: 0.3rem;
             }
@@ -164,9 +168,7 @@ export default {
 
             .hire-me {
                 margin-top: 10%;
-                width: 12rem;
-                padding: 20px 30px 20px 30px;
-
+                
                 .button {
                     font-size: 20px;
                 }
@@ -177,7 +179,6 @@ export default {
     @media screen and (max-width: 800px) {
         .avatar {
             grid-row: 1;
-
             .animate {
                 transform: scale(0.7);
                 margin-right: 30%;
@@ -186,6 +187,12 @@ export default {
         
         .intro {
             margin-top: -10%;
+            margin-left: 25%;
+        }
+
+        .info h1 {
+            margin-top: 10%;
+            margin-right: 15%;
         }
     }
 

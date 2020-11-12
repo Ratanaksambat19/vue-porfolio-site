@@ -28,8 +28,6 @@
         <path id="Path_50" data-name="Path 50" d="M160.23,203.935s72.1,118.723,160.344,132.415" transform="translate(123.839 407.201)" fill="none" stroke="#fafafa" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
       </g>
     </svg>
-
-
     </div>
 
 </template>
