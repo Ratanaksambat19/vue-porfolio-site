@@ -1,20 +1,5 @@
 <template>
     <div>
-        <svg v-if="name === 'skillbg'" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2007.847" height="550.241" viewBox="0 0 2007.847 550.241">
-            <defs>
-                <filter id="Path_75" x="0" y="0" width="2007.847" height="550.241" filterUnits="userSpaceOnUse">
-                    <feOffset dy="-10" input="SourceAlpha"/>
-                    <feGaussianBlur stdDeviation="5" result="blur"/>
-                    <feFlood flood-opacity="0.161"/>
-                    <feComposite operator="in" in2="blur"/>
-                    <feComposite in="SourceGraphic"/>
-                </filter>
-            </defs>
-            <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_75)">
-                <path id="Path_75-2" data-name="Path 75" d="M1990,1232.6s322.771-127.528,848.5-130.5,977.271,73.392,1086.635,139.773-26.338,373.95-21.921,378.4-1913.215,0-1913.215,0Z" transform="translate(-1975 -1077.02)" fill="#3c3c3c"/>
-            </g>
-    </svg>
-
     <svg v-if="name === 'clock'" id="Clock" xmlns="http://www.w3.org/2000/svg" width="229.575" height="188.911" viewBox="0 0 229.575 188.911">
         <g id="Group_2" data-name="Group 2" transform="translate(-900.535 -459.043)">
             <path id="Path_4" data-name="Path 4" d="M1093.45,602.806c11.391-6.167,18.242-13.967,20.526-22.1,3.308-11.778-2.975-24.256-18.958-33.484-13.612-7.86-31.668-11.859-49.8-11.965h.006l-38.79-.386c-.3,0-.594-.007-.893-.009h-.235c-17.784-.072-35.627,3.6-49.407,11.06-27.887,15.1-28.59,39.987-1.57,55.586,13.358,7.713,30.994,11.71,48.782,11.956h.213l.692.007,38.73.386h0C1060.953,614.119,1079.331,610.451,1093.45,602.806Z" transform="translate(15.278 34.086)" fill="#3f5052" opacity="0.35" style="mix-blend-mode: multiply;isolation: isolate"/>

@@ -38,7 +38,7 @@ export default {
     },
     methods: {
         mouseover() {
-            this.HireMe = 'SAY HI!'
+            this.HireMe = 'SAY "HI"!'
             this.HireMeClass = ['animate__animated', 'animate__bounce',  'animate__delay-0.8s']
         },
         mouseleave() {
@@ -62,7 +62,7 @@ export default {
         display: grid;
         background-color: $darkgray;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        padding-bottom: 10%;
+        padding-bottom: 5%;
     }
 
     .intro {

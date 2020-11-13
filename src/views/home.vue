@@ -15,3 +15,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  div {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+</style>
