@@ -131,10 +131,11 @@ export default {
         .avatar {
             .title {
                 font-size: 15px;
+                margin-bottom: 30px;
             }
 
             .animate {
-            margin-top: -25%;
+            margin-top: -30%;
             transform: scale(0.6);
             }
         }
@@ -177,6 +178,10 @@ export default {
     }
 
     @media screen and (max-width: 800px) {
+        .hero-section {
+            margin-top: -9px;
+        }
+
         .avatar {
             grid-row: 1;
             .animate {

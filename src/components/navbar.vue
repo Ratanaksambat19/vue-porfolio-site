@@ -109,13 +109,14 @@ ul {
   }
 }
 
- @media screen and (max-width: 1000px) {
+ @media screen and (max-width: 1245px) {
+
     body {
       overflow-x: hidden;
     }
 
     .logo {
-      margin-left: 13%;
+      margin-left: 10%;
 
     }
     .show-mobile {
@@ -149,7 +150,7 @@ ul {
       cursor: pointer;
       position: absolute;
       top: 0%;
-      left: 80%;
+      left: 85%;
     }
 
     .nav-links {

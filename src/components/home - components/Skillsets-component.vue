@@ -1,9 +1,8 @@
 <template>
-    <div skillset-section>
         <div class="skillset-icon">
             <div class="output">
-                <div class="output-img">
-                    <SkillSetIcon name = 'clock'/>
+                <div >
+                    <SkillSetIcon name = 'clock' class="output-img"/>
                 </div>
                 <div class=" output-text">
                     <h1>OUTPUT</h1>
@@ -34,8 +33,6 @@
                 </div>
             </div>
         </div>
-    
-    </div>
 </template>
 
 <script>
@@ -48,25 +45,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
     $pink: #FD4066;
     $darkgray:  #2a2a2a;
-    .skillset-section {
-        
-    }
 
     .skillset-icon {
         position: relative;
         border-radius: 25% 25% 0 0;
         background-color: #3C3C3C;
         padding: 0 50px 0 50px;
-        z-index: 2;
         display: grid;
-        grid-template-columns:  repeat(auto-fit, minmax(350px, 1fr));
-        align-items: center;
+        // border: green solid 5px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         justify-items: center;
         margin-top: -10%;
         padding-top: 20px;
         padding-bottom: 30px;
+        box-shadow: 0 10px 20px rgb(0, 0, 0), 0 6px 6px rgba(32, 31, 31, 0.911);
+        
         .line {
             width: 50%;
             height: 2px;
@@ -86,7 +82,7 @@ export default {
                 display: block;
                 text-align: center;
                 position: relative;
-                top: 20px;
+                // top: 20px;
                 color: white;
 
                 .line {
@@ -101,7 +97,7 @@ export default {
                 display: block;
                 text-align: center;
                 position: relative;
-                top: 20px;
+                // top: 20px;
                 color: white;
 
                 .line {
@@ -116,7 +112,7 @@ export default {
                 display: block;
                 text-align: center;
                 position: relative;
-                top: 20px;
+                // top: 20px;
                 color: white;
 
                 .line {
@@ -124,12 +120,171 @@ export default {
                 }
             }
         }
-
-     @media screen and (max-width: 1250px) {
-         .skillset-icon {
-            //  padding-top: -50%;
-         }
-     }
-
     }
+     @media screen and (max-width: 1180px) {
+         
+
+            .skillset-icon {
+                // border: solid red 5px;
+                margin-top: -20%;
+            }
+
+            .output {
+                // border: solid green 5px;
+
+                .output-img {
+                    transform: scale(0.8);
+                }
+
+                .output-text {
+                    font-size: 15px;
+                }
+            }
+
+            .quality {
+                // border: solid green 5px;
+
+                .quality-img {
+                    transform: scale(0.8);
+                }
+
+                .quality-text {
+                    font-size: 15px;
+                }
+            }
+
+            .deadline {
+                // border: solid green 5px;
+
+                .deadline-img {
+                    transform: scale(0.8);
+                }
+
+                .deadline-text {
+                    font-size: 15px;
+                }
+            }
+        }
+    
+        @media screen and (max-width: 1000px)  {
+            .skillset-icon {
+                // padding-bottom: 10px;
+                padding: 0%;
+                margin-top: -20%;
+
+            }
+
+            .output {
+                // border: solid blue 5px;
+
+                .output-img {
+                    transform: scale(0.5);
+                }
+                
+                .line {
+                    margin: 10px 0 10px 0;
+                }
+
+                .output-text {
+                    font-size: 10px;
+                    // margin-top: 20px;
+                    top: -10%;
+                    // border: solid blue 5px;
+                    // margin-top: -20%;
+                }
+            }
+
+            .quality {
+                // border: solid green 5px;
+
+                .quality-img {
+                    transform: scale(0.5);
+                }
+                
+                .line {
+                    margin: 10px 0 10px 0;
+                }
+
+                .quality-text {
+                    font-size: 10px;
+                    top: -10px;
+                }
+            }
+
+            .deadline {
+                // border: solid green 5px;
+
+                .deadline-img {
+                    transform: scale(0.5);
+                }
+
+                .deadline-text {
+                    font-size: 10px;
+                    top: -10px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .skillset-icon {
+                // border: blue solid 5px;
+                background-color: #3C3C3C;
+                // padding-left: 5%;
+                margin-top: -1%;
+                border-radius: 0;
+                // padding-bottom: 100%;
+            }
+            .output {
+                // border: solid green 5px;
+                grid-row: 1;
+                padding: 0px;
+                
+
+                .output-img {
+                    transform: scale(0.5);
+                    padding: 0;
+                }
+                
+                .line {
+                    margin: 10px 0 10px 0;
+                }
+
+                .output-text {
+                    padding: 0px;
+                    font-size: 10px;
+                    top: -50px;
+                }
+            }
+
+            .quality {
+                // border: solid green 5px;
+                grid-row: 2;
+                margin-top: -10%;
+                // bottom: -5%;
+
+                .quality-img {
+                    transform: scale(0.5);
+                }
+
+                .quality-text {
+                    font-size: 10px;
+                    top: -50px;
+                }
+            }
+
+            .deadline {
+                // border: solid green 5px;
+                margin-top: -10%;
+                grid-row: 3;
+
+                .deadline-img {
+                    transform: scale(0.5);
+                }
+
+                .deadline-text {
+                    font-size: 10px;
+                    top: -50px;
+                }
+            }
+        }
 </style>
