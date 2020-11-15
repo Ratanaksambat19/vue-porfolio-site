@@ -123,7 +123,6 @@ export default {
     }
      @media screen and (max-width: 1180px) {
          
-
             .skillset-icon {
                 // border: solid red 5px;
                 margin-top: -20%;
@@ -225,65 +224,93 @@ export default {
             }
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 600px) {
             .skillset-icon {
                 // border: blue solid 5px;
-                background-color: #3C3C3C;
-                // padding-left: 5%;
+                background-color: $darkgray;
                 margin-top: -1%;
                 border-radius: 0;
+                padding: 5% 10% 5% 10%;
                 // padding-bottom: 100%;
+
+                .line {
+                    margin: 5px 0 5px 0;
+                }
             }
             .output {
                 // border: solid green 5px;
-                grid-row: 1;
+                background-color: #3C3C3C;
+                
+                width: 200px;
+                height: 200px;
+                margin-bottom: 10%;
+                margin-left: -25%;
+                border-radius: 50%;
+                justify-content: center;
+                grid-column: 1;
                 padding: 0px;
                 
 
                 .output-img {
-                    transform: scale(0.5);
-                    padding: 0;
+                    margin-top: -15%;
+                    transform: scale(0.4);
                 }
                 
                 .line {
-                    margin: 10px 0 10px 0;
+                    margin: 5px 0 5px 0;
                 }
 
                 .output-text {
                     padding: 0px;
-                    font-size: 10px;
+                    font-size: 8px;
                     top: -50px;
+                    // margin-bottom: 20%;
                 }
             }
 
             .quality {
                 // border: solid green 5px;
-                grid-row: 2;
-                margin-top: -10%;
-                // bottom: -5%;
+                grid-column: 2/3;
+                margin-top: 0%;
+                width: 200px;
+                height: 200px;
+                // margin-bottom: 20%;
+                border-radius: 50%;
+                justify-content: center;
+                margin-right: -25%;
+                background-color: #3C3C3C;
 
                 .quality-img {
-                    transform: scale(0.5);
+                    margin-top: -20%;
+                    transform: scale(0.38);
                 }
 
                 .quality-text {
-                    font-size: 10px;
-                    top: -50px;
+                    font-size: 8px;
+                    top: -65px;
                 }
             }
 
             .deadline {
                 // border: solid green 5px;
+                background-color: #3C3C3C;
+                width: 200px;
+                height: 200px;
+                // margin-bottom: 20%;
+                // margin-bottom: 20%;
+                border-radius: 50%;
+                justify-content: center;
                 margin-top: -10%;
-                grid-row: 3;
+                grid-column: 1 / 3;
 
                 .deadline-img {
-                    transform: scale(0.5);
+                    margin-top: -20%;
+                    transform: scale(0.4);
                 }
 
                 .deadline-text {
-                    font-size: 10px;
-                    top: -50px;
+                    font-size: 8px;
+                    top: -65px;
                 }
             }
         }
