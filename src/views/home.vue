@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeroSection/>
-    <SkillSetSection/>
+    <SkillSetSection v-scrollanimation/>
   </div>
 </template>
 
@@ -17,9 +17,22 @@ export default {
 </script>
 
 <style scoped>
+
   div {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+  }
+
+  .before-enter {
+    opacity: 0.8;
+    transform: translateY(100px);
+    transition: all 2s ease-out;
+
+  }
+
+  .enter {
+    opacity: 1;
+    transform: translateY(0px);
   }
 </style>

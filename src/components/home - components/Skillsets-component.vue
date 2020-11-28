@@ -1,17 +1,17 @@
 <template>
         <div class="skillset-icon">
-            <div class="output">
-                <div >
-                    <SkillSetIcon name = 'clock' class="output-img"/>
+            <div class="output" v-scrollanimation>
+                <div class="output-img">
+                    <SkillSetIcon name = 'target'/>
                 </div>
-                <div class=" output-text">
+                <div class="output-text">
                     <h1>OUTPUT</h1>
                     <div class="line"></div>
                     <h3>COMPUTE <br> THE DESIRE OUTPUT</h3>
                 </div>
             </div>
 
-            <div class="quality">
+            <div class="quality" v-scrollanimation>
                 <div class="quality-img">
                     <SkillSetIcon name = 'star'/>
                 </div>
@@ -22,9 +22,9 @@
                 </div>
             </div>
 
-            <div class="deadline">
+            <div class="deadline" v-scrollanimation>
                 <div class="deadline-img">
-                    <SkillSetIcon name = 'target'/>
+                    <SkillSetIcon name = 'clock'/>
                 </div>
                 <div class="deadline-text">
                     <h1>DEADLINE</h1>
@@ -73,7 +73,7 @@ export default {
             display: grid;
             align-items: flex-end;
             justify-items: center;
-           
+            transition-delay: 0.3s;
             .output-img {
                 
             }
@@ -82,7 +82,6 @@ export default {
                 display: block;
                 text-align: center;
                 position: relative;
-                // top: 20px;
                 color: white;
 
                 .line {
@@ -92,12 +91,11 @@ export default {
         }
         
         .quality {
-
+            transition-delay: 0.5s;
             .quality-text {
                 display: block;
                 text-align: center;
                 position: relative;
-                // top: 20px;
                 color: white;
 
                 .line {
@@ -107,12 +105,15 @@ export default {
         }
 
         .deadline {
+            transition-delay: 0.7s;
+            .deadline-img {
+                margin-top: 10%;
+            }
 
             .deadline-text {
                 display: block;
                 text-align: center;
                 position: relative;
-                // top: 20px;
                 color: white;
 
                 .line {
@@ -124,12 +125,10 @@ export default {
      @media screen and (max-width: 1180px) {
          
             .skillset-icon {
-                // border: solid red 5px;
                 margin-top: -20%;
             }
 
             .output {
-                // border: solid green 5px;
 
                 .output-img {
                     transform: scale(0.8);
@@ -141,7 +140,6 @@ export default {
             }
 
             .quality {
-                // border: solid green 5px;
 
                 .quality-img {
                     transform: scale(0.8);
@@ -153,7 +151,6 @@ export default {
             }
 
             .deadline {
-                // border: solid green 5px;
 
                 .deadline-img {
                     transform: scale(0.8);
@@ -167,14 +164,12 @@ export default {
     
         @media screen and (max-width: 1000px)  {
             .skillset-icon {
-                // padding-bottom: 10px;
                 padding: 0%;
                 margin-top: -20%;
 
             }
 
             .output {
-                // border: solid blue 5px;
 
                 .output-img {
                     transform: scale(0.5);
@@ -186,15 +181,11 @@ export default {
 
                 .output-text {
                     font-size: 10px;
-                    // margin-top: 20px;
                     top: -10%;
-                    // border: solid blue 5px;
-                    // margin-top: -20%;
                 }
             }
 
             .quality {
-                // border: solid green 5px;
 
                 .quality-img {
                     transform: scale(0.5);
@@ -211,7 +202,6 @@ export default {
             }
 
             .deadline {
-                // border: solid green 5px;
 
                 .deadline-img {
                     transform: scale(0.5);
@@ -226,21 +216,17 @@ export default {
 
         @media screen and (max-width: 600px) {
             .skillset-icon {
-                // border: blue solid 5px;
                 background-color: $darkgray;
                 margin-top: -1%;
                 border-radius: 0;
                 padding: 5% 10% 5% 10%;
-                // padding-bottom: 100%;
 
                 .line {
                     margin: 5px 0 5px 0;
                 }
             }
             .output {
-                // border: solid green 5px;
                 background-color: #3C3C3C;
-                
                 width: 200px;
                 height: 200px;
                 margin-bottom: 10%;
@@ -263,18 +249,15 @@ export default {
                 .output-text {
                     padding: 0px;
                     font-size: 8px;
-                    top: -50px;
-                    // margin-bottom: 20%;
+                    top: -60px;
                 }
             }
 
             .quality {
-                // border: solid green 5px;
                 grid-column: 2/3;
                 margin-top: 0%;
                 width: 200px;
                 height: 200px;
-                // margin-bottom: 20%;
                 border-radius: 50%;
                 justify-content: center;
                 margin-right: -25%;
@@ -292,26 +275,35 @@ export default {
             }
 
             .deadline {
-                // border: solid green 5px;
                 background-color: #3C3C3C;
                 width: 200px;
                 height: 200px;
-                // margin-bottom: 20%;
-                // margin-bottom: 20%;
                 border-radius: 50%;
-                justify-content: center;
                 margin-top: -10%;
                 grid-column: 1 / 3;
 
                 .deadline-img {
-                    margin-top: -20%;
+                    position: relative;
+                    top: -20%;
                     transform: scale(0.4);
                 }
 
                 .deadline-text {
                     font-size: 8px;
-                    top: -65px;
+                    top: -95px;
                 }
             }
         }
+
+        
+    .before-enter {
+        opacity: 0;
+        transform: translateY(100px) scale(.5);
+        transition: all 2s cubic-bezier(.33,.87,.62,.62);
+    }
+
+    .enter {
+        opacity: 1;
+        transform: translateY(0);
+    }
 </style>

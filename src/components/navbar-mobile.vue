@@ -29,7 +29,7 @@ export default {
     background-color: #2a2a2a;
     top: 10%;
     left: 50%;
-    z-index: 1;
+    z-index: 0;
     width: 50%;
     height: 100%;
   }

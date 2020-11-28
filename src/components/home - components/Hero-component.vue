@@ -1,6 +1,6 @@
 <template>
     <div class="hero-section">
-        <div class="intro">
+        <div class="intro" v-scrollanimation>
             
             <!-- <div class="intro-title"><h1>DEVELOPER <br> UI & UX DESIGNER</h1></div> -->
             <div class="name">I'm <br><div class="line"></div> SAMBATH</div>
@@ -11,7 +11,7 @@
         </div>
 
         <div class="avatar">
-            <div class="title">
+            <div class="title" v-scrollanimation>
                 <h1>DEVELOPER <br> UI & UX DESIGNER</h1>
             </div>
             <div class="animate">
@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div class="description">
+        <div class="description" v-scrollanimation>
             <h1>A college Student Who is exploring New Technology. <br> <br> A Freelancer Who is Hoping To Bring Your Idea To Life...</h1>
         </div>
     </div>
@@ -57,6 +57,7 @@ export default {
     .hero-section {
         padding: 0;
         margin: 0;
+        padding-top: 7%;
         box-sizing: border-box;
         font-family: 'Comfortaa', cursive;
         display: grid;
@@ -66,6 +67,7 @@ export default {
     }
 
     .intro {
+        transition-delay: 0.9s;
         justify-self: center;
         align-self: center;
 
@@ -111,7 +113,8 @@ export default {
         display: block;
         
         .title {
-            margin-top: 2%;
+            transition-delay: 0.2s;
+            margin-top: 5%;
             text-align: center;
             color: white;
             font-weight: bold;
@@ -120,6 +123,7 @@ export default {
         }
     }
     .description {
+        transition-delay: 1s;
         justify-self: center;
         align-self: center;
         text-align: center;
@@ -183,6 +187,10 @@ export default {
         }
 
         .avatar {
+
+            .title {
+                margin-top: 13%;
+            }
             grid-row: 1;
             .animate {
                 transform: scale(0.7);
@@ -201,6 +209,16 @@ export default {
         }
     }
 
+    .before-enter {
+        opacity: 0;
+        transform: translate(-100px, -50px) scale(.5);
+        transition: all 3s cubic-bezier(.21,.84,.89,1.49);
+    }
+
+    .enter {
+        opacity: 1;
+        transform: translate(0);
+    }
     /* Another layout */
     /*@media screen and (max-width: 800px) {
         .hero-section {

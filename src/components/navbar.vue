@@ -1,10 +1,10 @@
 <template>
   <div>
-    <nav>
+    <nav :class="{ 'navbar-hidden' : !showNav }" >
         <div class="logo">
           <router-link to="/"><icon name = 'logo'></icon></router-link>
         </div>
-        
+
         <ul class="nav-links">
             <li class="github">
               <a href="#"><icon name = 'github'></icon></a>
@@ -18,10 +18,9 @@
             <icon name = "burger"/>
         </div>
         <transition name='slide-fade'>
-          <NavMobile class="show-mobile" v-if="showNavbar"/>
+          <NavMobile class="show-mobile" v-if="showNavbarMobile"/>
         </transition>
     </nav>
-    
   </div>
     
 </template>
@@ -37,17 +36,38 @@ export default {
 
     data() {
       return {
-        // burgerNav: ['nav-'],
-        showNavbar: false,
+        showNav: true,
+        lastScrollPosition: 0,
+        showNavbarMobile: false,
       }
     },
 
     methods: {
       burgerFn:function() {
         // this.burgerNav = ['nav-links']
-        this.showNavbar = !this.showNavbar
+        this.showNavbarMobile = !this.showNavbarMobile
+      }, 
+
+      onScroll() {
+        const currentScrollPosition = window.pageXOffset || document.documentElement.scrollTop
+
+        if(Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+          return
+        }
+
+        this.showNav = currentScrollPosition < this.lastScrollPosition
+
+        this.lastScrollPosition = currentScrollPosition
       }
-    }
+    },
+
+    mounted() {
+      window.addEventListener('scroll', this.onScroll)
+    },
+
+    beforeDestroy() {
+      window.removeEventListener('scroll', this.onScroll)
+    },
 }
 </script>
 
@@ -63,8 +83,21 @@ nav {
   display: flex;
   justify-content: space-around;
   padding: 5px;
+  width: 100vw;
+  height: 80px;
   background-color: #2a2a2a;
   align-items: center;
+  position: fixed;
+  z-index: 1;
+  transition: .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.navbar-hidden {
+  box-shadow: none;
+  transform: translateY(-100px);
+  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: translate3d(0, -100%, 0);
+  
 }
 
 .nav-links {
@@ -110,16 +143,20 @@ ul {
 }
 
  @media screen and (max-width: 1245px) {
-
+   nav {
+     position: fixed;
+   }
     body {
       overflow-x: hidden;
     }
 
     .logo {
+      margin-top: 3%;
       margin-left: 10%;
-
     }
     .show-mobile {
+      height: 100vh;
+      margin-top: -5px;
       opacity: 1;
       transform: translateX(0%);
     }
@@ -146,7 +183,7 @@ ul {
 
     .burger {
       display: inline-block;
-      z-index: 1;
+      z-index: 2;
       cursor: pointer;
       position: absolute;
       top: 0%;
