@@ -5,6 +5,7 @@ import scrollAnimation from './Directive/ScrollAnimation'
 import router from './router'
 import vuetify from './plugins/vuetify';
 import 'animate.css';
+import './assets/styling/main.css';
 
 Vue.directive('scrollanimation', scrollAnimation)
 Vue.config.productionTip = false
